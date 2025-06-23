@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Library System</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="script" href="./script.js">
+    </link>
+</head>
+
+<body>
+    <!-----------------------------------
+     * #Header
+    ------------------------------------>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="book-open"></i>
+                <h1>University Library</h1>
+            </div>
+
+            <div class="nav-links">
+                <a href="#" class="active"><i class="home"></i> Home</a>
+                <a href="#"><i class="book"></i> Books</a>
+                <a href="#"><i class="user-graduate"></i> Students</a>
+                <a href="#"><i class="chart-bar"></i> Reports</a>
+            </div>
+
+            <div class="user-controls">
+                <div class="user-info">
+                    <span>Welcome, Admin</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-----------------------------------
+     * #Main Content
+    ------------------------------------>
+    <div class="container">
+        <div class="dashboard">
+            <!-- Sidebar -->
+
+            <div class="content">
+                <div class="section-title">
+                    <h2><i class="book"></i> Book Catalog</h2>
+                    <button class="btn btn-primary"><i class="plus"></i> Add New Book</button>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Search books by title, author, or category...">
+                    <button><i class="search"></i> Search</button>
+                </div>
+
+                <!-----------------------------------
+                 * #Books Grid
+                ------------------------------------>
+                <div class="books-grid">
+
+                    <div class="book-card">
+                        <div class="book-thumbnail">
+                            <i class="book"></i>
+                        </div>
+                        <div class="book-info">
+                            <h3>Introduction to Algorithms</h3>
+                            <div class="author">Thomas H. Cormen</div>
+                            <div class="meta">
+                                <span>Computer Science</span>
+                                <span><i class="download"></i> 245</span>
+                            </div>
+                        </div>
+                        <a href="#" class="download-btn"><i class="download"></i> Download PDF</a>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-thumbnail">
+                            <i class="book"></i>
+                        </div>
+                        <div class="book-info">
+                            <h3>Introduction to Algorithms</h3>
+                            <div class="author">Thomas H. Cormen</div>
+                            <div class="meta">
+                                <span>Computer Science</span>
+                                <span><i class="download"></i> 245</span>
+                            </div>
+                        </div>
+                        <a href="#" class="download-btn"><i class="download"></i> Download PDF</a>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-thumbnail">
+                            <i class="book"></i>
+                        </div>
+                        <div class="book-info">
+                            <h3>Introduction to Algorithms</h3>
+                            <div class="author">Thomas H. Cormen</div>
+                            <div class="meta">
+                                <span>Computer Science</span>
+                                <span><i class="download"></i> 245</span>
+                            </div>
+                        </div>
+                        <a href="#" class="download-btn"><i class="download"></i> Download PDF</a>
+                    </div>
+
+                </div>
+
+                <!-----------------------------------
+                * #User Management Section
+                --------------------------->
+                <div class="section-title" style="margin-top: 3rem;">
+                    <h2><i class="users"></i> User Management</h2>
+                </div>
+
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>S001</td>
+                            <td>Riyadul Islam</td>
+                            <td>riyadul15-4828@diu.edu.bd</td>
+                            <td>Computer Science</td>
+                            <td>Student</td>
+                            <td>
+                                <button class="action-btn edit"><i class="edit">Edit</i></button>
+                                <button class="action-btn delete"><i class="trash">Delete</i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>S001</td>
+                            <td>Riyadul Islam</td>
+                            <td>riyadul15-4828@diu.edu.bd</td>
+                            <td>Computer Science</td>
+                            <td>Student</td>
+                            <td>
+                                <button class="action-btn edit"><i class="edit">Edit</i></button>
+                                <button class="action-btn delete"><i class="trash">Delete</i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-----------------------------------
+                 * #Upload
+                -------------------------------------->
+                <div class="section-title">
+                    <h2><i class="cloud-upload-alt"></i> Upload New Book</h2>
+                </div>
+
+                <form class="upload-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookTitle">Book Title</label>
+                            <input type="text" id="bookTitle" placeholder="Enter book title">
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" placeholder="Enter author name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="">Select category</option>
+                                <option value="cs">Computer Science</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="business">Business</option>
+                                <option value="math">Mathematics</option>
+                                <option value="science">Science</option>
+                                <option value="literature">Literature</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookNumber">Book Number</label>
+                            <input type="text" id="bookNumber" placeholder="Enter Book Number">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" rows="4" placeholder="Enter book description"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="coverImage">Cover Image</label>
+                            <input type="file" id="coverImage" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="pdfFile">PDF File</label>
+                            <input type="file" id="pdfFile" accept=".pdf">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                        <i class="upload"></i> Upload Book
+                    </button>
+                </form>
+
+                <!-----------------------------------
+                 * #Developer
+                -------------------------------------->
+                <div class="section-title">
+                    <h2><i class="cloud-upload-alt"></i> Developer</h2>
+                </div>
+                <div class="profile-cards-row">
+                    <div class="profile-card">
+                        <img src="./images/ME.png" alt="Developer 1">
+                        <h3>Riyadul Islam</h3>
+                        <p>Email: riyadul15-4828@diu.edu.bd</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/riyad959">LinkedIn</a>
+                            <a href="https://github.com/riyad959">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <img src="./images/moin.jpeg" alt="Developer 2">
+                        <h3>Moin Hassan</h3>
+                        <p>Email: hasan15-4762@diu.edu.bd</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/moinhasanrafi">LinkedIn</a>
+                            <a href="https://github.com/moinhasanrafi">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------
+     * #Footer
+    -------------------------------------->
+    <footer>
+        <div class="footer-container">
+            <div class="about group">
+                <p>&#8226 link <br>&#8226 link<br> &#8226 link</p>
+                <a href="#about">About Us</a>
+            </div>
+            <div class="hr"></div>
+            <div class="info group">
+                <ul>
+                    <a href="#home">Home</a>
+                    <a href="#book">Book</a>
+                    <a href="#students">Students</a>
+                    <a href="#report">Report</a>
+                </ul>
+            </div>
+            <div class="hr"></div>
+            <div class="follow group">
+            </div>
+        </div>
+        <div class="footer-copyright group">
+            <p>&copy; 2025 by Riyad. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
