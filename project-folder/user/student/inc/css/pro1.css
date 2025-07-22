@@ -7,15 +7,30 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.login {
+    margin-bottom: 30px;
+    padding: 50px;
+    padding-bottom: 70px;
+}
+
+body .login {
+    background: linear-gradient(to right, #1D91E8, #26CDF2);
+}
+
+.reg-header h2 {
+    color: #DDDDDD;
+    z-index: 999999;
+}
+
+.login-body h4 {
+    margin-bottom: 20px;
+}
+
 .header {
     width: 100%;
     height: 75px;
     padding: 5px;
-
-
     box-shadow: 0px 0px 3px;
-
-
 }
 
 .header .logo {
@@ -28,6 +43,12 @@ body {
     width: 100%;
     overflow: hidden;
 }
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
 
 .header-right {
     float: right;
@@ -93,28 +114,18 @@ body {
     margin-bottom: 40px;
 }
 
-viewer-pdf-toolbar {
-    visibility: hidden;
+.reg-wrapper span.errort {
+    color: red;
+    margin-left: 30%;
+    margin-bottom: 20px;
+
 }
 
-#toolbar,
-#annotations-bar {
-    visibility: hidden;
-}
-
-.reg-body span.success {
-    color: #218838;
-    margin-left: 170px;
-    margin-bottom: 10px;
-    margin-top: -5px;
-}
-
-.reg-wrapper span.error {
+.reg-body span.error {
     color: red;
     margin-left: 170px;
     margin-bottom: 10px;
     margin-top: -5px;
-    font-size: 18px;
 }
 
 .reg-body span.success {
@@ -405,6 +416,15 @@ viewer-pdf-toolbar {
 
 }
 
+.header-right ul li a {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.header-right ul li a:hover {
+    color: #FF4072;
+}
+
 .dropdown a {
     text-decoration: none;
     color: #fff;
@@ -419,7 +439,7 @@ viewer-pdf-toolbar {
 }
 
 .dropdown-menu {
-    background: #073f5f;
+    background: #abd5ee;
     color: #fff;
     min-width: 240px;
     padding: 20px;
@@ -462,7 +482,6 @@ viewer-pdf-toolbar {
     color: orange;
 }
 
-/*dashboard-header*/
 .dashboard-content {
     padding-bottom: 30px;
 }
@@ -566,9 +585,6 @@ viewer-pdf-toolbar {
     color: #fff;
 }
 
-/*=======
-    st-registraion
-========*/
 
 .registration {
     width: 100%;
@@ -576,14 +592,8 @@ viewer-pdf-toolbar {
     padding-bottom: 20px;
 }
 
-.reg-header h2 {
-    color: #fff;
-    z-index: 999999;
-}
-
 .reg-header h4 {
-
-    color: #fff;
+    margin-top: 20px;
 }
 
 .reg-body.user-content {
@@ -596,7 +606,7 @@ viewer-pdf-toolbar {
     margin: 0 auto;
     box-shadow: 0px 0px 3px;
     padding: 40px 25px;
-    background: #ddd;
+    background: #ddd !important;
 }
 
 .reg-body .form-group {
@@ -605,18 +615,19 @@ viewer-pdf-toolbar {
 }
 
 .reg-body label {
-    width: 145px;
+    width: 140px;
     margin-right: 20px;
 
 }
 
 .reg-body .custom {
     width: 350px;
+
+
 }
 
 .registration .reg-body input[type=text],
 .registration .reg-body input[type=password],
-.registration .reg-body select,
 .registration .reg-body textarea {
     outline: 0 !important;
     border: 1px solid #D52B2A;
@@ -631,6 +642,7 @@ viewer-pdf-toolbar {
 .reg-body .submit {
     margin-top: 25px;
     margin-left: 200px;
+
 
 }
 
@@ -649,10 +661,12 @@ viewer-pdf-toolbar {
     position: relative;
 }
 
+.login.registration .wrapper .reg-header h2 {
+    color: black;
+}
+
 .login-body {
-
     width: 320px;
-
 }
 
 .login-body a {
@@ -669,11 +683,6 @@ viewer-pdf-toolbar {
     text-decoration-color: #D52B2A;
 }
 
-.login-body input[type=text],
-.login-body input[type=password] {
-    border: 1px solid #D52B2A;
-}
-
 .login-body .submit {
     background: #D52B2A;
     border: none;
@@ -688,6 +697,60 @@ viewer-pdf-toolbar {
     box-shadow: 0px 0px 3px;
 }
 
+.login.registration .wrapper {
+    align-items: center;
+    min-height: calc(100vh - 100px);
+}
+
+.login-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+    max-width: 420px;
+    width: 100%;
+}
+
+.login-body h4 {
+    color: #FF4072;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.login-content input[type="text"],
+.login-content input[type="password"] {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 14px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.login-content input[type="text"]:focus,
+.login-content input[type="password"]:focus {
+    border-color: #1D91E8;
+    box-shadow: 0 0 0 2px rgba(29, 145, 232, 0.2);
+    outline: none;
+}
+
+.login-content .submit {
+    background: #FF4072;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.login-content .submit:hover {
+    background: #1D91E8;
+    cursor: pointer;
+}
+
 .login-footer .change_link a {
     color: #D52B2A;
     font-weight: bold;
@@ -695,9 +758,22 @@ viewer-pdf-toolbar {
     text-decoration: none;
 }
 
-/*student info*/
 .std-info table tbody {
     font-size: 14px;
+}
+
+form .btn {
+    width: 100%;
+}
+
+.alert.alert-warning {
+    background: #ffe1e8;
+    border-left: 5px solid #FF4072;
+    color: #333;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 6px;
 }
 
 .bstore {
@@ -726,8 +802,6 @@ viewer-pdf-toolbar {
     font-size: 25px;
 }
 
-/*pagination*/
-
 .pagination {
     margin-top: 20px;
     margin-left: 150px;
@@ -753,12 +827,12 @@ viewer-pdf-toolbar {
 
 .profile-content .photo {
     width: 250px;
-    height: 350px;
+    height: 300px;
 }
 
 .photo img {
     width: 250px;
-    height: 350px;
+    height: 300px;
 
 }
 
@@ -785,7 +859,7 @@ viewer-pdf-toolbar {
 .status ul li {
     list-style: none;
     float: left;
-    margin-left: 30px;
+    margin-left: 16px;
 }
 
 .status ul li:nth-child(2) i {
@@ -837,19 +911,6 @@ tbody {
     margin-right: 0;
 }
 
-.sidebar-menu li.active a {
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
-    border-right: 5px solid #1ABB9C;
-}
-
-.sidebar-menu li.active ul a {
-
-    box-shadow: none;
-    border-right: 0px solid #fff;
-    border: 0;
-}
-
 .pass-content {
     width: 550px;
     margin: 0 auto;
@@ -880,4 +941,17 @@ tbody {
 .issue-content input[type=submit] {
     background: #D52B2A;
     color: white;
+}
+
+.footer {
+    background: transparent;
+    color: #fff;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.login.registration .wrapper .reg-header h2 {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #00000033;
 }
