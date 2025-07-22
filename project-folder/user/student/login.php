@@ -69,7 +69,7 @@ include 'inc/connection.php';
             <div class="gap-30"></div>
             <div class="login-content">
                 <div class="login-body">
-                    <h4>User Login Form</h4>
+                    <h4 class="text-center">Student Login Form</h4>
                     <form action="" method="post">
                         <div class="mb-20">
                             <input type="text" name="username" class="form-control" placeholder="Username"
@@ -110,7 +110,7 @@ include 'inc/connection.php';
                         <script type="text/javascript">
                             window.location = "my-issued-books.php";
                         </script>
-                    <?php
+                        <?php
                     }
                 }
                 ?>

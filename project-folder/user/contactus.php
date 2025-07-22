@@ -22,7 +22,7 @@
 			<div class="row">
 				<div class="col-3">
 					<div class="logo">
-						<img src="dist/img/logo.svg" alt="logo">
+						<img src="./dist/img/logo.svg" alt="logo">
 					</div>
 				</div>
 				<div class="col-9">

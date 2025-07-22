@@ -1,3 +1,10 @@
+<?php
+include 'inc/connection.php';
+$not = "";
+$res = mysqli_query($link, "select * from message where rusername='$_SESSION[student]' && read1='n'");
+$not = mysqli_num_rows($res);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +33,8 @@
 						<?php
 						$res = mysqli_query($link, "select * from std_registration where username='" . $_SESSION['student'] . "'");
 						while ($row = mysqli_fetch_array($res)) {
-							?><img src="<?php echo $row["photo"]; ?> " height="" width="" alt="something wrong" class="rounded-circle"></a> <?php
+							?><img src="<?php echo $row["photo"]; ?> " height="" width="" alt="something wrong"
+								class="rounded-circle"></a> <?php
 						}
 						?>
 					</div>
@@ -51,7 +59,7 @@
 							<ul class="menus1">
 								<li><a href="changepass.php">change password</a></li>
 								<li><a href="profile.php">profile</a></li>
-								<!--                                <li><a href="notifications.php">Messages</a></li> somossa kortese-->
+								<!--                                <li><a href="notifications.php">Messages</a></li>-->
 							</ul>
 						</li>
 						<li class="menu <?php if ($page == 'ibook') {
@@ -89,7 +97,8 @@
 								<?php
 								$res = mysqli_query($link, "select * from std_registration where username='" . $_SESSION['student'] . "'");
 								while ($row = mysqli_fetch_array($res)) {
-									?><a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $row["photo"]; ?>"
+									?><a href="" class="dropdown-toggle" data-toggle="dropdown"><img
+											src="<?php echo $row["photo"]; ?>"
 											alt=""><span><?php echo $_SESSION["student"]; ?></span></a> <?php
 								}
 								?>

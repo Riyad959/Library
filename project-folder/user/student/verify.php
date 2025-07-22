@@ -6,7 +6,7 @@ if (isset($_GET['vkey'])) {
     die("Something went wrong");
 }
 
-$resultSet = mysqli_query($link, "SELECT vkey, verified FROM std_registration WHERE vkey='$vkey' AND verified ='no' LIMIT 1");
+$resultSet = mysqli_query($link, "SELECT vkey, verified FROM std_registration WHERE vkey='$vkey' AND vefified ='no' LIMIT 1");
 $update = mysqli_query($link, "update std_registration set verified='yes' where vkey='$vkey' LIMIT 1");
 
 if ($update) {

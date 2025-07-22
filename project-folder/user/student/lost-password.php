@@ -52,7 +52,6 @@
 <body>
 <form class="login-form" action="lost-password.php" method="post">
     <h2 class="form-title">Reset password</h2>
-    <!-- form validation messages pore dimu-->
 
     <div class="form-group">
         <label>Your email address</label> <br>

@@ -1,7 +1,17 @@
 <?php
+session_start();
+if (!isset($_SESSION["student"])) {
+    ?>
+    <script type="text/javascript">
+        window.location = "login.php";
+    </script>
+    <?php
+}
+$page = 'books';
 include 'inc/header.php';
 include 'inc/connection.php';
 ?>
+
 <div class="dashboard-content">
     <div class="dashboard-header">
         <div class="container">
@@ -86,7 +96,6 @@ include 'inc/connection.php';
                                         echo "<tr>";
                                         $i = 0;
                                     }
-
                     }
                     echo "</tr>";
                     echo "</table>";

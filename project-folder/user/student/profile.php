@@ -1,7 +1,16 @@
 <?php 
+     session_start();
+    if (!isset($_SESSION["student"])) {
+        ?>
+            <script type="text/javascript">
+                window.location="login.php";
+            </script>
+        <?php
+    }
     include 'inc/header.php';
     include 'inc/connection.php';
  ?>
+
 	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
@@ -27,7 +36,6 @@
                                     while ($row = mysqli_fetch_array($res)){
                                         ?><img src="<?php echo $row["photo"]; ?> " height="" width="" alt="something wrong"></a> <?php
                                     }                                                            
-
                                 ?>
 							</div>
 							<div class="uploadPhoto">
@@ -57,7 +65,7 @@
 						<div class="col-md-9">
 							<div class="details">
                                 <?php
-                                    $res5 = mysqli_query($link, "select * from std_registration where username='$_SESSION[student]' ");
+                                       $res5 = mysqli_query($link, "select * from std_registration where username='$_SESSION[student]' ");
                                     while($row5 = mysqli_fetch_array($res5)){
                                         $regno      = $row5['regno'];
                                         $username  = $row5['username'];
@@ -77,7 +85,7 @@
                                         <input type="text" class="form-control custom"  name="regno" value="<?php echo $regno; ?>" disabled />
                                     </div>
                                     <div class="form-group details-control">
-                                         <label for="username">Username:</label>
+                                        <label for="username">Username:</label>
                                         <input type="text" class="form-control custom"  name="username" value="<?php echo $username; ?>" disabled />
                                     </div>
                                     <div class="form-group details-control">
@@ -99,20 +107,20 @@
                                     </div>
 
                                     <div class="form-group details-control">
-                                         <label for="email">Email:</label>
+                                        <label for="email">Email:</label>
                                         <input type="text" class="form-control custom"  name="email" value="<?php echo $email; ?>" disabled/>
                                     </div>
                                     <div class="form-group details-control">
-                                         <label for="phone">Phone No:</label>
+                                        <label for="phone">Phone No:</label>
                                         <input type="text" class="form-control custom"  name="phone" value="<?php echo $phone; ?>" />
                                     </div>			                    
                                     <div class="form-group details-control">
                                         <label for="address">Address:</label>
-                                         <input type="text" class="form-control custom"  name="address" value="<?php echo $address; ?>" />
+                                        <input type="text" class="form-control custom"  name="address" value="<?php echo $address; ?>" />
                                     </div>
                                     <div class="form-group details-control">
                                         <label for="utype">User Type:</label>
-                                         <input type="text" class="form-control custom"  name="utype" value="<?php echo $utype; ?>"  disabled="" />
+                                        <input type="text" class="form-control custom"  name="utype" value="<?php echo $utype; ?>"  disabled="" />
                                     </div>
                                     <div class="text-right mt-20">
                                         <input type="submit" value="Save" class="btn btn-info" name="update">
@@ -120,22 +128,22 @@
                                 <?php
                                 ?>
                                 </form>
-			                </div> 
+                        </div> 
                             <?php
-                               if (isset($_POST["update"])){
-                                   mysqli_query($link, "update std_registration set 
-                                   name='$_POST[name]',
-                                   phone='$_POST[phone]',
-                                   address='$_POST[address]'
-                                   where username='$_SESSION[student]'");
+                            if (isset($_POST["update"])){
+                                mysqli_query($link, "update std_registration set 
+                                name='$_POST[name]',
+                                phone='$_POST[phone]',
+                                address='$_POST[address]'
+                                where username='$_SESSION[student]'");
                                     ?>
                                         <script type="text/javascript">
                                             window.location="profile.php";
                                         </script>
                                     <?php
-                               }
+                            }
                             ?>
-		                </div>    
+		</div>    
 					</div>
 				</div>
 			</div>					
@@ -143,4 +151,4 @@
 	</div>
 	<?php 
 		include 'inc/footer.php';
-	 ?>
+	?>
