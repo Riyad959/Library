@@ -1,48 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: 'Montserrat', sans-serif;
 }
-.gap-30{
+
+.gap-30 {
     margin-bottom: 30px;
 }
-.gap-40{
+
+.gap-40 {
     margin-bottom: 40px;
 }
-.border{
+
+.border {
     width: 60px;
     height: 5px;
     background: #fff;
 }
-.main-content{
+
+.main-content {
     width: 100%;
     height: 800px;
     overflow: hidden;
-    
+
 
 }
-.main-content .left-sidebar{
+
+.main-content .left-sidebar {
     width: 20%;
     height: 800px;
     background: #434F56;
     float: left;
 }
-.main-content .left-sidebar .p-title{
+
+.main-content .left-sidebar .p-title {
     width: 100%;
     padding: 13px;
     padding-left: 20px;
     background: #434F56;
     border-bottom: 1px solid #ddd;
 }
-.main-content .p-title a{
+
+.main-content .p-title a {
     text-decoration: none;
     color: #fff;
     font-size: 22px;
     text-transform: uppercase;
 }
-.main-content .p-title a i{
+
+.main-content .p-title a i {
     width: 35px;
     height: 35px;
     line-height: 35px;
@@ -51,51 +60,60 @@ body{
     border-radius: 50%;
     border: 2px solid #fff;
 }
-.main-content .p-title a span{
+
+.main-content .p-title a span {
     margin-left: 10px;
 }
-.main-content .left-sidebar .profile{
+
+.main-content .left-sidebar .profile {
     width: 100%;
     padding: 20px;
     margin-top: 0;
     padding-top: 0;
-    
+
 }
-.main-content .left-sidebar .profile .profile-pic{
+
+.main-content .left-sidebar .profile .profile-pic {
     width: 40%;
     float: left;
-    
+
 }
-.main-content .left-sidebar .profile img{
+
+.main-content .left-sidebar .profile img {
     width: 85px;
-    height: 85px;  
+    height: 85px;
     border: 5px solid #ddd;
 }
-.main-content .left-sidebar .profile .profile-info{
+
+.main-content .left-sidebar .profile .profile-info {
     width: 60%;
     float: left;
     color: #fff;
-    
+
 }
-.main-content .left-sidebar .profile .profile-info h2{
+
+.main-content .left-sidebar .profile .profile-info h2 {
     font-size: 23px;
 }
 
-.sidebar-menu{
+.sidebar-menu {
     color: #fff;
     width: 100%;
     padding-top: 60px;
     padding-left: 0;
 }
-.sidebar-menu h3{
+
+.sidebar-menu h3 {
     margin-left: 20px;
     font-size: 24px;
 }
-.sidebar-menu .border{
+
+.sidebar-menu .border {
     margin-left: 20px;
     margin-bottom: 20px;
 }
-.sidebar-menu ul li a{
+
+.sidebar-menu ul li a {
     text-decoration: none;
     color: #eee;
     width: 270px;
@@ -105,122 +123,138 @@ body{
     text-transform: capitalize;
     transition: all .5s ease;
 }
-.sidebar-menu ul li a:hover{
+
+.sidebar-menu ul li a:hover {
     background: #1E282C;
     color: #fff;
 
 }
-.sidebar-menu ul{
+
+.sidebar-menu ul {
     padding-left: 0;
-    
-   
+
+
 }
-.sidebar-menu ul li{
-   
-     
-       
-}
-.sidebar-menu  ul li a i{
+
+.sidebar-menu ul li {}
+
+.sidebar-menu ul li a i {
     margin-right: 10px;
     font-size: smaller;
 }
-.sidebar-menu ul li a span{
+
+.sidebar-menu ul li a span {
     float: right;
-    
+
 }
+
 .sidebar-menu .menus1,
 .sidebar-menu .menus2,
-.sidebar-menu .menus3{
+.sidebar-menu .menus3 {
     display: none;
 }
+
 .sidebar-menu .menus1 li,
 .sidebar-menu .menus2 li,
-.sidebar-menu .menus3 li{
+.sidebar-menu .menus3 li {
     margin-left: 60px;
 
-    
+
 
 }
+
 .sidebar-menu .menus1 li a,
 .sidebar-menu .menus2 li a,
-.sidebar-menu .menus3 li a{
+.sidebar-menu .menus3 li a {
     padding: 0;
     padding: 10px;
     padding-left: 0;
 }
+
 .sidebar-menu .menus1 li a:hover,
 .sidebar-menu .menus2 li a:hover,
-.sidebar-menu .menus3 li a:hover{
+.sidebar-menu .menus3 li a:hover {
     background: 0;
     color: #fff;
 }
-.nav-pills .nav-link.active, .nav-pills .active>.nav-link{
-   box-shadow: 0; 
+
+.nav-pills .nav-link.active,
+.nav-pills .active>.nav-link {
+    box-shadow: 0;
 
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     background: 0;
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
     border-right: 5px solid #1ABB9C;
     border-radius: 0;
-    
+
 }
-.content{
+
+.content {
     width: 80%;
     height: 800px;
     float: right;
-   
+
 }
-.content .inner{
+
+.content .inner {
     width: 100%;
     height: 70px;
     background: #434F56;
     padding: 12px;
 
 
-    
-    
+
+
 }
 
-.content .inner .heading{
-   width: 60%;
-   float: left;
-   color: #fff;
+.content .inner .heading {
+    width: 60%;
+    float: left;
+    color: #fff;
 }
-.content .inner .header-profile{
-   width: calc(40%-20px); 
-   float: right;
-   margin-right: 20px;
 
-  
-   
-   
+.content .inner .header-profile {
+    width: calc(40%-20px);
+    float: right;
+    margin-right: 20px;
 
-    
+
+
+
+
+
 }
-.content .inner .header-profile .icon i{
+
+.content .inner .header-profile .icon i {
     margin-right: 30px;
     font-size: 20px;
     margin-top: 10px;
 }
-.header-profile span{
+
+.header-profile span {
     color: #fff;
     margin-left: 10px;
 }
-.header-profile ul li{
 
-       list-style: none;
-       float: left;
-    
+.header-profile ul li {
+
+    list-style: none;
+    float: left;
+
 }
-.header-profile ul li i{
+
+.header-profile ul li i {
     color: #fff;
 
 }
-.header-profile .header-info{
-   
-}
-.header-profile img{
+
+.header-profile .header-info {}
+
+.header-profile img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -228,44 +262,51 @@ body{
 
 }
 
-.dropdown a{
+.dropdown a {
     text-decoration: none;
     color: #fff;
 
 }
-.dropdown img{
+
+.dropdown img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
 
 }
-.dropdown-menu{
+
+.dropdown-menu {
     background: #434F56;
     color: #fff;
     min-width: 240px;
     padding: 20px;
-     margin-left: -40px; 
-     top: 56px;
-     border-radius: 0;
-     border-top: 1px solid #ddd;
+    margin-left: -40px;
+    top: 56px;
+    border-radius: 0;
+    border-top: 1px solid #ddd;
 
 }
-.dropdown-menu img{
+
+.dropdown-menu img {
     margin-left: 18px;
 }
-.dropdown-menu .user-header p{
+
+.dropdown-menu .user-header p {
     margin-bottom: 5px;
     margin-top: 8px;
     margin-left: 16px;
 }
-.dropdown-menu .user-footer{
+
+.dropdown-menu .user-footer {
     margin-top: 20px;
 }
-.dropdown-menu .user-footer ul li{
+
+.dropdown-menu .user-footer ul li {
     list-style: none;
     float: left;
 }
-.dropdown-menu .user-footer a{
+
+.dropdown-menu .user-footer a {
     text-decoration: none;
     color: #000;
     text-transform: capitalize;
@@ -275,21 +316,23 @@ body{
 }
 
 /*dashboard-header*/
-.dashboard-header .left{
+.dashboard-header .left {
     padding: 20px;
 }
 
-.dashboard-header .left p span{
+.dashboard-header .left p span {
     text-transform: capitalize;
     margin-right: 10px;
     font-weight: bold;
 
 }
-.dashboard-header .right{
+
+.dashboard-header .right {
     padding: 20px;
     margin-right: 20px;
 }
-.dashboard-header .right a{
+
+.dashboard-header .right a {
     text-transform: capitalize;
     text-decoration: none;
     color: #222;
@@ -297,28 +340,34 @@ body{
     font-weight: bold;
 
 }
-.dashboard-header .right a i{
+
+.dashboard-header .right a i {
     margin-right: 5px;
 }
-.dashboard-header .right span{
+
+.dashboard-header .right span {
     text-transform: capitalize;
 }
-.box{
+
+.box {
     width: 100%;
     height: 120px;
     background: #ddd;
     padding: 15px;
     margin-bottom: 30px;
-    
+
 }
-.box .text{
+
+.box .text {
     width: 50%;
     float: left;
 }
-.box .image{
+
+.box .image {
     width: 50%;
     float: left;
 }
-.box .image img{
+
+.box .image img {
     width: 80%;
 }

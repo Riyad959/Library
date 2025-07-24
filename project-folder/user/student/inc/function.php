@@ -58,7 +58,7 @@ if (isset($_POST["submit"])) {
 			$to = "$email";
 			$subject = "Email Verification";
 			$message = "<a href='http://localhost/lms/Source/librarian/user/student/verify.php?vkey=$vkey'>Verify Email</a>";
-			$headers = "From: parttimemail18@gmail.com \r\n";
+			$headers = "From: riyadulislam959@gmail.com \r\n";
 			$headers .= "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type: text/html; charset-UTF-8" . "\r\n";
 			mail($to, $subject, $message, $headers);
