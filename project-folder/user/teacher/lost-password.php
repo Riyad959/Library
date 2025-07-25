@@ -19,7 +19,7 @@ if (isset($_POST["reset-password"])) {
         $to = "$email";
         $subject = "Forgot password";
         $message = "Your password is $password";
-        $headers = "From: parttimemail18@gmail.com \r\n";
+        $headers = "From: riyadulislam959@gmail.com \r\n";
         $headers.= "MIME-Version: 1.0". "\r\n";
         $headers.= "Content-type: text/html; charset-UTF-8". "\r\n";
         mail($to, $subject, $message,$headers);
@@ -52,7 +52,6 @@ if (isset($_POST["reset-password"])) {
 <body>
 <form class="login-form" action="lost-password.php" method="post">
     <h2 class="form-title">Reset password</h2>
-    <!-- form validation messages -->
 
     <div class="form-group">
         <label>Your email address</label> <br>

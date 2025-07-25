@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
         .login{
-            background-image: url(inc/img/3.jpg);
             margin-bottom: 30px;
             padding: 50px;
             padding-bottom: 70px;
@@ -84,6 +83,11 @@
             </div>
         </div>
     </div>
+
+    <div class="footer text-center">
+        <p style="color: #000;">&copy; All rights reserved to Riyad959</p>
+    </div>
+
     <script src="inc/js/jquery-2.2.4.min.js"></script>
     <script src="inc/js/bootstrap.min.js"></script>
     <script src="inc/js/custom.js"></script>

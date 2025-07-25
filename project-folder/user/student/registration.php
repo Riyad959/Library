@@ -138,7 +138,7 @@ include 'inc/function.php';
     </div>
 
     <div class="footer text-center">
-        <p>&copy; All rights reserved to Riyad959</p>
+        <p style="color: #000;">&copy; All rights reserved to Riyad959</p>
     </div>
 
     <script src="inc/js/jquery-2.2.4.min.js"></script>

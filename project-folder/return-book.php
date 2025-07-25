@@ -1,16 +1,16 @@
-<?php 
-    session_start();
-    if (!isset($_SESSION["username"])) {
-        ?>
-            <script type="text/javascript">
-                window.location="login.php";
-            </script>
-        <?php
-    }
-    include 'inc/header.php';
-    include 'inc/connection.php';
- ?>
-	
+	<?php 
+		 session_start();
+		if (!isset($_SESSION["username"])) {
+            ?>
+                <script type="text/javascript">
+                    window.location="login.php";
+                </script>
+            <?php
+        }
+        include 'inc/header.php';
+        include 'inc/connection.php';
+	 ?>
+	<!--dashboard area-->
 	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
@@ -33,13 +33,13 @@
                            <tr>
                                <td>
                                    <select name="enr" class="form-control">
-                                        <option value="">1001</option>
-                                        <option value="">1002</option>
-                                        <option value="">1003</option>
+                                        <option value="">14502000020</option>
+                                        <option value="">14502000007</option>
+                                        <option value="">14502000008</option>
                                    </select>
                                </td>
                                <td>
-                                   <input type="submit" name="submit1" class="btn btn-info" value="Search">
+                                   <input type="submit" name="submit1" class="btn btn-info form-control" value="Search">
                                </td>
                            </tr>
                        </table>
@@ -50,9 +50,10 @@
 								<table class="table  table-striped table-dark text-center">
 									<thead>
 										<tr>
-											<th>Id No</th>
+											<th>Reg No</th>
 											<th>Name</th>
 											<th>Username</th>
+											<th>Semester</th>
 											<th>Dept</th>
 											<th>Book Name</th>
 											<th>Issue Date</th>
@@ -63,37 +64,40 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td>1001</td>
+											<td>14502000020</td>
 											<td>Mostafizur Rahman</td>
 											<td>utter333</td>
+											<td>8th</td>
 											<td>CSE</td>
 											<td>Computer Network & Secutity</td>
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td ><a href="return.php">Return book</a></td>
+											<td ><a href="return.php" class="link">Return book</a></td>
 										</tr>
 										<tr>
-											<td>1001</td>
+											<td>14502000020</td>
 											<td>Mostafizur Rahman</td>
 											<td>utter333</td>
+											<td>8th</td>
 											<td>CSE</td>
 											<td>Computer Network & Secutity</td>
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td><a href="return.php">Return book</a></td>
+											<td><a href="return.php" .std-info>Return book</a></td>
 										</tr>
 										<tr>
-											<td>1001</td>
+											<td>14502000020</td>
 											<td>Mostafizur Rahman</td>
 											<td>utter333</td>
+											<td>8th</td>
 											<td>CSE</td>
 											<td>Designing for Safe Use</td>
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td><a href="return.php">Return book</a></td>
+											<td><a href="return.php" .std-info>Return book</a></td>
 										</tr>
 									</tbody>
 								</table>

@@ -1,5 +1,5 @@
 <?php 
-     session_start();
+    session_start();
     if (!isset($_SESSION["username"])) {
         ?>
             <script type="text/javascript">
@@ -10,7 +10,7 @@
     include 'inc/header.php';
     include 'inc/connection.php';
  ?>
-	
+	<!--dashboard area-->
 	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
@@ -23,12 +23,13 @@
 					<div class="col-md-6">
 						<div class="right text-right">
 							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">send Message to student</span>
+							<span class="disabled">send message to teacher</span>
 						</div>
 					</div>
 				</div>
 				<div class="sendMessage">
 					<form action="" method="post" name="form1" class="col-lg-6" enctype="multipart/form-data">
+					 
                         <table class="table table-bordered table-striped">
 						<?php
 							date_default_timezone_set("Asia/Dhaka");
@@ -49,13 +50,13 @@
 						?>
                             <tr>
                                 <td>
-                                  <select name="rusername" class="form-control">
+                                   <select name="rusername" class="form-control">
 	                                     <?php 
-                                             $res= mysqli_query($link, "select * from std_registration");
+                                             $res= mysqli_query($link, "select * from t_registration");
                                                 
                                                 while($row=mysqli_fetch_array($res)){
                                                     ?><option value="<?php echo $row["username"]?>">
-                                                    <?php  echo $row["username"]. " (".$row["regno"].")"; ?>
+                                                    <?php  echo $row["username"]. " (".$row["idno"].")"; ?>
                                                     </option><?php
                                                 } 
                                            ?>
@@ -80,7 +81,7 @@
 			</div>					
 		</div>
 	</div>
- 
+	
 	<?php 
 		include 'inc/footer.php';
 	 ?>

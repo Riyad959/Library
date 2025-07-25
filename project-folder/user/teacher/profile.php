@@ -1,4 +1,16 @@
-<div class="dashboard-content">
+<?php 
+     session_start();
+    if (!isset($_SESSION["teacher"])) {
+        ?>
+            <script type="text/javascript">
+                window.location="login.php";
+            </script>
+        <?php
+    }
+    include 'inc/header.php';
+    include 'inc/connection.php';
+ ?>
+	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
 				<div class="row">

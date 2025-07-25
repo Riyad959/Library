@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include 'inc/connection.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
         .login{
-            background-image: url(inc/img/3.jpg);
             margin-bottom: 30px;
             padding: 50px;
             padding-bottom: 70px;
@@ -61,7 +64,7 @@
 			<div class="gap-30"></div>
 			<div class="login-content">
 				<div class="login-body">
-                    <h4>User Login Form</h4>
+                    <h4 class="text-center">Teacher Login Form</h4>
 					<form action="" method="post">
 						<div class="mb-20">
 							<input type="text" name="username" class="form-control" placeholder="Username" required=""/>
@@ -70,7 +73,7 @@
 							<input type="password" name="password" class="form-control" placeholder="Password" required=""/>
 						</div>
 						<div class="mb-20">
-							<input class="btn btn-info submit" type="submit" name="login" value="Login"><a class="reset_pass" href="lost-password.php">Lost your password?</a>
+							<input class="btn btn-info submit" type="submit" name="login" value="Login"><a class="reset_pass text-center" href="lost-password.php">Lost your password?</a>
 						</div>
 					</form>
 				</div>
@@ -106,6 +109,11 @@
 			</div>
 		</div>
 	</div>
+
+    <div class="footer text-center">
+        <p style="color: #000;">&copy; All rights reserved to Riyad959</p>
+    </div>
+
 	<script src="inc/js/jquery-2.2.4.min.js"></script>
 	<script src="inc/js/bootstrap.min.js"></script>
 	<script src="inc/js/custom.js"></script>

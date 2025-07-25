@@ -1,4 +1,7 @@
-<div class="dashboard-content">
+	<?php 
+		include 'inc/header.php';
+	 ?>
+	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
 				<div class="row">

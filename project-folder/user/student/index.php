@@ -72,8 +72,7 @@ include 'inc/connection.php';
                     if ($count == 0) {
                         ?>
                         <div class="alert alert-warning">
-                            <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username
-                                Or Password.</span>
+                            <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
                         </div>
                         <?php
                     } else {
@@ -91,7 +90,7 @@ include 'inc/connection.php';
     </div>
 
     <div class="footer text-center">
-        <p>&copy; All rights reserved to Riyad959</p>
+        <p style="color: #000;">&copy; All rights reserved to Riyad959</p>
     </div>
 
     <script src="inc/js/jquery-2.2.4.min.js"></script>

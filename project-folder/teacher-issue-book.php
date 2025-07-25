@@ -1,5 +1,5 @@
 <?php 
-     session_start();
+    session_start();
     if (!isset($_SESSION["username"])) {
         ?>
             <script type="text/javascript">
@@ -11,7 +11,7 @@
     include 'inc/connection.php';
     $rdate = date("d/m/Y", strtotime("+30 days"));
  ?>
-	
+	<!--dashboard area-->
 	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
@@ -24,7 +24,7 @@
 					<div class="col-md-6">
 						<div class="right text-right">
 							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">student issue book</span>
+							<span class="disabled">teacher issue book</span>
 						</div>
 					</div>
 				</div>
@@ -32,16 +32,16 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="issue-wrapper">
-								<form action="" class="form-control" method="post" name="reg">
+								<form action="" class="form-control" method="post" name="idn">
 									<table class="table">
 										<tr>
 											<td class="">
-												<select name="reg" id="" class="form-control">
+												<select name="idn" id="" class="form-control">
 													 <?php 
-                                                        $res= mysqli_query($link, "select regno from std_registration");
+                                                        $res= mysqli_query($link, "select idno from t_registration");
                                                         while($row=mysqli_fetch_array($res)){
                                                             echo "<option>";
-                                                            echo $row["regno"];
+                                                            echo $row["idno"];
                                                             echo "</option>";
                                                         }
                                                     ?>
@@ -54,31 +54,30 @@
 									</table>
                                     <?php 
                                     if (isset($_POST["submit1"])) {
-                                       $res5 = mysqli_query($link, "select * from std_registration where regno='$_POST[reg]' ");
+                                       $res5 = mysqli_query($link, "select * from t_registration where idno='$_POST[idn]' ");
                                        while($row5 = mysqli_fetch_array($res5)){
-                                           $name      = $row5['name'];                    
+                                           $name      = $row5['name'];
 										   $username  = $row5['username'];
-                                           $sem       = $row5['sem'];
-                                           $dept      = $row5['dept'];
-                                           $session   = $row5['session'];
+                                           $lecturer      = $row5['lecturer'];
                                            $email     = $row5['email'];
                                            $phone     = $row5['phone'];
                                            $utype     = $row5['utype'];
-                                           $regno     = $row5['regno'];
+                                           $idno     = $row5['idno'];
                                            $_SESSION["utype"]     = $utype;
-                                           $_SESSION["regno"]     = $regno;
-                                           $_SESSION["susername"] = $username;
+                                           $_SESSION["idno"]     = $idno;
+                                           $_SESSION["tusername"] = $username;
                                        }
+                                    
                                     ?>
 									<table class="table table-bordered">
-                                         <tr>
+                                        <tr>
                                             <td>
                                                <input type="text" class="form-control" name="utype" value="<?php echo $utype; ?>" disabled> 
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                               <input type="text" class="form-control" name="regno" value="<?php echo $regno; ?>"  disabled> 
+                                               <input type="text" class="form-control" name="idno" value="<?php echo $idno; ?>" disabled> 
                                             </td>
                                         </tr>
                                         <tr>
@@ -86,19 +85,9 @@
                                                <input type="text" class="form-control" name="name" value="<?php echo $name; ?>"> 
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                               <input type="text" class="form-control" name="sem" value="<?php echo $sem; ?>"> 
-                                            </td>
-                                        </tr>
                                          <tr>
                                             <td>
-                                               <input type="text" class="form-control" name="session"  value="<?php echo $session; ?>"> 
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>
-                                               <input type="text" class="form-control" name="dept"  value="<?php echo $dept; ?>"> 
+                                               <input type="text" class="form-control" name="teaches"  value="<?php echo $lecturer; ?>"> 
                                             </td>
                                         </tr>
                                         <tr>
@@ -108,7 +97,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                               <input type="text" class="form-control" name="mail"  value="<?php echo $email; ?>"> 
+                                               <input type="text" class="form-control" name="email"  value="<?php echo $email; ?>"> 
                                             </td>
                                         </tr>
                                         <tr>
@@ -127,7 +116,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                               <input type="text" class="form-control" name="booksissuedate"  value="<?php echo date("d/m/Y"); ?>"> 
+                                               <input type="text" class="form-control" name="booksissuedate" placeholder="Books issue date" value="<?php echo date("d/m/Y"); ?>"> 
                                             </td>
                                         </tr>
                                         <tr>
@@ -148,7 +137,6 @@
                                     </table>
                                   <?php
                                 }
-
                             ?>
                                 </form>
                                 <?php
@@ -163,11 +151,12 @@
                                             <div class="alert alert-danger col-lg-6 col-lg-push-3">
                                             <strong style="">This book is not available.</strong>
                                             </div>
-                                          <?php  
+                                          <?php
                                        }
                                        else{
-                                          mysqli_query($link, "insert into issue_book values('','$_SESSION[utype]','$_SESSION[regno]','$_POST[name]','$_POST[sem]','$_POST[session]','$_POST[dept]','$_POST[phone]','$_POST[mail]','$_POST[booksname]','$_POST[booksissuedate]','$_POST[booksreturndate]','$_SESSION[susername]') ");
+                                          mysqli_query($link, "insert into t_issuebook values('','$_SESSION[utype]','$_SESSION[idno]','$_POST[name]','$_POST[teaches]','$_POST[phone]','$_POST[email]','$_POST[booksname]','$_POST[booksissuedate]','$_POST[booksreturndate]','$_SESSION[tusername]') ");
                                           mysqli_query($link, "update add_book set books_availability=books_availability-1 where books_name='$_POST[booksname]'");
+
                                           ?>
                                               <script type="text/javascript">
                                                   alert("books issued successfully");
@@ -176,15 +165,14 @@
                                         <?php
                                         }
                                     }
-                                 ?>
+                                    ?>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>				
 			</div>					
 		</div>
 	</div>
-
 	<?php 
 		include 'inc/footer.php';
 	 ?>
