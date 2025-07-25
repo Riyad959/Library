@@ -68,6 +68,7 @@
 							<p><i class="fas fa-user"></i><span>Developer:</span></p>
 							<div class="container mt-5">
 								<div class="row">
+									<!-- Developer 1 -->
 									<div class="col-md-6">
 										<div class="card">
 											<img src="./dist/img/ME.png" alt="Developer 1"
@@ -87,6 +88,7 @@
 							<p><i class="fas fa-user"></i><span>Developer:</span></p>
 							<div class="container mt-5">
 								<div class="row">
+									<!-- Developer 2 -->
 									<div class="col-md-6">
 										<div class="card">
 											<img src="./dist/img/moin.jpeg" alt="Developer 2"

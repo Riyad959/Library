@@ -20,7 +20,7 @@
             $to = "$email";
             $subject = "Forgot password";
             $message = "Your password is $password";
-            $headers = "From: parttimemail18@gmail.com \r\n";
+            $headers = "From: riyadulislam959@gmail.com \r\n";
             $headers.= "MIME-Version: 1.0". "\r\n";
             $headers.= "Content-type: text/html; charset-UTF-8". "\r\n";
             mail($to, $subject, $message,$headers);

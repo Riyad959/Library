@@ -14,7 +14,6 @@ include 'inc/connection.php';
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
         .login {
-            background-image: url(inc/img/3.jpg);
             margin-bottom: 30px;
             padding: 50px;
             padding-bottom: 70px;

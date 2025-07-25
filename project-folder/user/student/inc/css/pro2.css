@@ -1,0 +1,134 @@
+.registration {
+    background: linear-gradient(to right, #1D91E8, #26CDF2);
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+}
+
+.form-inline {
+    display: flex;
+    flex-flow: column;
+    align-items: normal;
+}
+
+.reg-wrapper {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reg-header h2 {
+    color: #FF4072;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #00000033;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.reg-body h4 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reg-body .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.reg-body label {
+    flex: 0 0 150px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.reg-body .custom {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.reg-body .custom:focus {
+    border-color: #1D91E8;
+    box-shadow: 0 0 0 2px rgba(29, 145, 232, 0.2);
+    outline: none;
+}
+
+.reg-body textarea {
+    resize: vertical;
+}
+
+.reg-body span.error {
+    color: red;
+    font-size: 13px;
+    display: block;
+    margin-left: 150px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.reg-body span.success {
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.reg-body .submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.reg-body input[type="submit"].change {
+    background: #FF4072;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.reg-body input[type="submit"].change:hover {
+    background: #1D91E8;
+    cursor: pointer;
+}
+
+.reg-body a.change {
+    background: #FF4072;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.reg-body a.change:hover {
+    background: #e33664;
+}
+
+
+.footer {
+    color: #000;
+    padding: 20px;
+    background: transparent;
+    font-size: 13px;
+}

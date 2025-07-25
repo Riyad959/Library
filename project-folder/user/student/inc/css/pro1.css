@@ -96,6 +96,7 @@ body .login {
 
 .mb-20 {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .mt-20 {
@@ -163,7 +164,7 @@ body .login {
 .main-content .left-sidebar {
     width: 20%;
     height: auto;
-    background: #073f5f;
+    background: linear-gradient(to right, #1D91E8, #26CDF2);
     float: left;
 }
 
@@ -171,7 +172,7 @@ body .login {
     width: 100%;
     padding: 13px;
     padding-left: 20px;
-    background: #073f5f;
+    background: linear-gradient(to right, #1D91E8, #26CDF2);
     border-bottom: 1px solid #ddd;
 }
 
@@ -250,7 +251,7 @@ body .login {
 .sidebar-menu ul li a {
     text-decoration: none;
     color: #eee;
-    width: 270px;
+    /* width: 270px; */
     padding: 15px 20px;
     font-size: 13px;
     display: block;
@@ -324,7 +325,7 @@ body .login {
 .nav-pills .show>.nav-link {
     background: 0;
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
-    border-right: 5px solid #1ABB9C;
+    border-right: 5px solid #ff0000;
     border-radius: 0;
 
 }
@@ -345,11 +346,8 @@ body .login {
 .content .inner {
     width: 100%;
     height: 70px;
-    background: #073f5f;
+    background: linear-gradient(to right, #1D91E8, #26CDF2);
     padding: 12px;
-
-
-
 
 }
 
@@ -673,7 +671,7 @@ body .login {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 
 }
 
@@ -764,6 +762,7 @@ body .login {
 
 form .btn {
     width: 100%;
+    background-color: #1D91E8;
 }
 
 .alert.alert-warning {
@@ -876,11 +875,16 @@ form .btn {
 .sidebar-menu li.active a {
 
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
-    border-right: 5px solid #1ABB9C;
+    border-right: 5px solid #ff0000;
 }
 
 tbody {
     font-size: 14px;
+}
+
+.table-dark{
+    background: #fff;
+    color: #000;
 }
 
 .control-books img {
@@ -920,11 +924,11 @@ tbody {
 }
 
 .pass-content input[type=password] {
-    border: 1px solid #D52B2A;
+    border: 1px solid #1D91E8;
 }
 
 .pass-content input[type=submit] {
-    background: #D52B2A;
+    background: #1D91E8;
     color: white;
 }
 
@@ -939,13 +943,13 @@ tbody {
 }
 
 .issue-content input[type=submit] {
-    background: #D52B2A;
+    background: #1D91E8;
     color: white;
 }
 
 .footer {
     background: transparent;
-    color: #000;
+    color: #fff;
     font-size: 13px;
     margin-top: 20px;
 }

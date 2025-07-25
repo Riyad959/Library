@@ -11,7 +11,6 @@ $page = 'ibook';
 include 'inc/header.php';
 include 'inc/connection.php';
 ?>
-
 <div class="dashboard-content">
 	<div class="dashboard-header">
 		<div class="container">

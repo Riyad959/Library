@@ -17,7 +17,7 @@ include 'inc/connection.php';
 			<div class="row">
 				<div class="col-md-6">
 					<div class="left">
-						<p><span>dashboard</span>User panel</p>
+						<p><span>Dashboard</span>User panel</p>
 					</div>
 				</div>
 				<div class="col-md-6">

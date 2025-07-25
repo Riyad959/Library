@@ -10,18 +10,16 @@ include 'inc/function.php';
     <title>Library Management System</title>
     <link rel="stylesheet" href="inc/css/bootstrap.min.css">
     <link rel="stylesheet" href="inc/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="inc/css/pro1.css">
+    <link rel="stylesheet" href="inc/css/pro2.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <style>
         .registration {
-            background-image: url(inc/img/3.jpg);
             margin-bottom: 30px;
             padding: 50px;
             padding-bottom: 70px;
         }
 
         .reg-header h2 {
-            color: #DDDDDD;
             z-index: 999999;
         }
 
@@ -126,8 +124,13 @@ include 'inc/function.php';
                         <textarea name="address" id="address" class="form-control custom"
                             placeholder="Your address"></textarea>
                     </div>
+                    <!-- <div class="submit">
+                        <input type="submit" value="Register" name="submit" class="btn change text-center">
+                    </div> -->
                     <div class="submit">
                         <input type="submit" value="Register" name="submit" class="btn change text-center">
+                        <a href="../student/login.php" class="btn change text-center"
+                            style="margin-left: 10px;">Login</a>
                     </div>
                 </form>
             </div>

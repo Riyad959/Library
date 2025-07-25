@@ -53,7 +53,7 @@ if (isset($_POST["submit"])) {
 		$e_msg = "<strong>Error ! </strong> <span>Email Address Not Valid</span>";
 	} else {
 		$vkey = md5(time() . $username);
-		$insert = mysqli_query($link, "insert into std_registration values('','$name','$username','$password','$email','$phone','$sem','$dept','$session','$regno','$address','$utype','$photo','pending','$vkey','no')");
+		$insert = mysqli_query($link, "insert into std_registration values('','$name','$username','$password','$email','$phone','$sem','$dept','$session','$regno','$address','$utype','$photo','yes','$vkey','yes')");
 		if ($insert) {
 			$to = "$email";
 			$subject = "Email Verification";

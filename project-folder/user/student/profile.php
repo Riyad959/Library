@@ -10,7 +10,6 @@
     include 'inc/header.php';
     include 'inc/connection.php';
  ?>
-
 	<div class="dashboard-content">
 		<div class="dashboard-header">
 			<div class="container">
@@ -68,7 +67,7 @@
                                        $res5 = mysqli_query($link, "select * from std_registration where username='$_SESSION[student]' ");
                                     while($row5 = mysqli_fetch_array($res5)){
                                         $regno      = $row5['regno'];
-                                        $username  = $row5['username'];
+                                        $username   = $row5['username'];
                                         $name      = $row5['name'];
                                         $sem      = $row5['sem'];
                                         $session      = $row5['session'];
@@ -128,7 +127,7 @@
                                 <?php
                                 ?>
                                 </form>
-                        </div> 
+                            </div> 
                             <?php
                             if (isset($_POST["update"])){
                                 mysqli_query($link, "update std_registration set 
@@ -143,7 +142,7 @@
                                     <?php
                             }
                             ?>
-		</div>    
+                        </div>    
 					</div>
 				</div>
 			</div>					

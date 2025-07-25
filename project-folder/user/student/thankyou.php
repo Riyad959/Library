@@ -1,4 +1,3 @@
-<!-- dum dum page -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,9 +34,3 @@
     <script src="inc/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-

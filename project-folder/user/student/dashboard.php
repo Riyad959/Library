@@ -11,7 +11,6 @@ $page = 'home';
 include 'inc/header.php';
 include 'inc/connection.php';
 ?>
-<!--dashboard area-->
 <div class="dashboard-content">
 	<div class="dashboard-header">
 		<div class="container">
